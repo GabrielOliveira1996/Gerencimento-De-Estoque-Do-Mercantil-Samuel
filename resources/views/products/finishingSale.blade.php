@@ -36,24 +36,28 @@
                 <th></th>    
             </tr>
 
-            @foreach($products as $p)
+            @foreach($invoiceProducts as $products)
             <tr>
-                <td>{{ $p->name }}</td>
-                <td>{{ $p->quantity }}x</td>
-                <td>{{ $p->price }}</td>
+                <td>{{ $products->name }}</td>
+                <td>{{ $products->quantity }}x</td>
+                <td>{{ $products->price }}</td>
                 <td>=</td>
-                <td>{{ $p->price * $p->quantity }}</td>         
+                <td>{{ $products->price * $products->quantity }}</td>         
             </tr>
             @endforeach
         </table>
         ----------------------------------------------------------
+        
+            Desconto: {{ $discountValue }}
+            Subtotal: {{ $subTotalPrice }}
+            Total: {{ $totalPrice }}
+        
+
         <br>
             <p style="text-align:center;">{{$invoice}}</p>
         <br>
         <br>
-    
-    INFORMAR VALORES, SUBVALORES E VALOR FINAL
-
+ 
     </div>
     
 </body>

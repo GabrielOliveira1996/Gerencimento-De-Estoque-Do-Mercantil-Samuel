@@ -28,8 +28,7 @@ Route::prefix('/produtos')->group(function(){
     Route::post('/todos-os-produtos', [App\Http\Controllers\ProductController::class, 'searchProductInStock'])
         ->name('searchProductInStock');
 
-    Route::get('/adicionar-produto', [App\Http\Controllers\ProductController::class, 'addProductView'])
-        ->name('addProductView');
+    Route::get('/adicionar-produto', function(){return view('products.addProduct');});
     Route::post('/adicionar-produto', [App\Http\Controllers\ProductController::class, 'addProduct'])
         ->name('addProduct');
 

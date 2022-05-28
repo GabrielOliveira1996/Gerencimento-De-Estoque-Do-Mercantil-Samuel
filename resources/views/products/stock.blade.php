@@ -3,6 +3,24 @@
 @section('content')
 <div class="container">
 
+    @if(!empty(session('successfulProductChange')))
+        <div class="align-success-request">
+            {{session('successfulProductChange')}}
+        </div>
+    @endif
+
+    @if(!empty(session('productSuccessfullyAddedToStock')))
+        <div class="align-success-request">
+            {{session('productSuccessfullyAddedToStock')}}
+        </div>
+    @endif
+
+    @if(!empty(session('amountAddedToExistingProduct')))
+        <div class="align-success-request">
+            {{session('amountAddedToExistingProduct')}}
+        </div>
+    @endif
+
     @if(!empty(session('successRegisteringToStock')))
         <div class="align-success-request">
             {{session('successRegisteringToStock')}}

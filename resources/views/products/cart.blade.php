@@ -9,12 +9,6 @@
         </div>
     @endif
 
-    @if(!empty(session('productDontExistToRegistration')))
-        <div class="align-errors">
-            {{session('productDontExistToRegistration')}}
-        </div>
-    @endif
-
     @if(!empty(session('productDontExistInCart')))
         <div class="align-errors">
         {{session('productDontExistInCart')}}
@@ -32,11 +26,16 @@
         <div class="row d-flex justify-content-center">
             
         <div class="row d-flex justify-content-center">
-            <div class="col-lg-4">
-                <input type="text" name="bar_code" class="form-control mt-3" maxlength="13" placeholder="Código de barras">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-2">
+                    <input type="text" name="bar_code" class="form-control mt-3" maxlength="13" placeholder="Código de barras">
+                </div>
             </div>
-            <div class="col-lg-2">
-                <input type="number" name="quantity" class="form-control mt-3" placeholder="Quantidade">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-2">
+                    <input type="number" name="quantity" class="form-control mt-3" placeholder="Quantidade">
+                </div>
             </div>
         </div>
 
@@ -77,11 +76,11 @@
             @endforeach
                 <tr>
                     <th scope="col">
-                        <a href="{{route('finishingSale')}}" class="btn btn-primary">Gerar Nota</a>
+                        <a href="{{route('finishingSale')}}" class="btn btn-primary" target="_blank">Gerar Nota</a>
                     </th>
                     <th scope="col"></th>
                     <th scope="col"></th>
-                    <th scope="col">Desconto: {{$discount}}</th>
+                    <th scope="col">Desconto: {{$discountValue}}</th>
                     <th scope="col">Subtotal: {{$subTotalPrice}}</th>
                     <th scope="col">Total: {{$totalPrice}}</th>
                 </tr>

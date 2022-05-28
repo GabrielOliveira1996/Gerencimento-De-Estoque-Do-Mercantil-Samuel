@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('invoice')->default('0');
             $table->string('name');
             $table->integer('quantity');
             $table->decimal('price');
