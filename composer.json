@@ -11,7 +11,7 @@
         "box/spout": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
-        "laravel/sanctum": "^2.14.1",
+        "laravel/sanctum": "^2.15",
         "laravel/tinker": "^2.7",
         "psr/simple-cache": "^3.0",
         "rap2hpoutre/fast-excel": "^3.2"

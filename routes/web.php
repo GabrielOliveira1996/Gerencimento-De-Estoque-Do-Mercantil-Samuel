@@ -1,17 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Models\Product;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,8 +17,9 @@ Route::prefix('/produtos')->group(function(){
         ->name('stock');
     Route::post('/todos-os-produtos', [App\Http\Controllers\ProductController::class, 'searchProductInStock'])
         ->name('searchProductInStock');
-
-    Route::get('/adicionar-produto', function(){return view('products.addProduct');});
+   
+    Route::get('/adicionar-produto', function(){return view('products.addProduct');})
+        ->name('addProductView');
     Route::post('/adicionar-produto', [App\Http\Controllers\ProductController::class, 'addProduct'])
         ->name('addProduct');
 
@@ -55,8 +46,7 @@ Route::prefix('/produtos')->group(function(){
     Route::get('/comprovante', [App\Http\Controllers\ProductController::class, 'generateInvoice'])
         ->name('finishingSale');
 
-    Route::get('/buscar-comprovante', [App\Http\Controllers\ProductController::class, 'searchInvoiceView'])
-        ->name('searchInvoiceView');
+    Route::get('/buscar-comprovante', function(){return view('products.searchInvoice');})->name('searchInvoiceView');
     Route::post('/buscar-comprovante', [App\Http\Controllers\ProductController::class, 'searchInvoice'])
         ->name('searchInvoice');
 });

@@ -13,6 +13,11 @@ class Invoice extends Model
         'name',
         'quantity',
         'price',
-        'bar_code'
+        'bar_code',
+        'subtotal',
+        'discount',
+        'total',
+        'created_at',
+        'updated_at'
     ];
 }

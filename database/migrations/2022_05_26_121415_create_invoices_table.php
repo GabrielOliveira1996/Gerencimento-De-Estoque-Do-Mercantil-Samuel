@@ -22,6 +22,9 @@ return new class extends Migration
             $table->integer('quantity');
             $table->decimal('price');
             $table->string('bar_code');
+            $table->integer('subtotal');
+            $table->integer('discount');
+            $table->integer('total');
             $table->timestamps();
         });
     }

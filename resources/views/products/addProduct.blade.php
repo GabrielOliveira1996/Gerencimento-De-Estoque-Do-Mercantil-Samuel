@@ -11,7 +11,7 @@
             @endforeach
         </div>
     @endif
-
+    
     @if(!empty(session('fileNotSelected')))
         <div class="align-errors">
             {{session('fileNotSelected')}}
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                     
-                <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+                <button type="submit" class="btn btn-primary mt-3">Adicionar</button>
 
             </form>
         </div>
@@ -60,7 +60,7 @@
                         <input type="file" class="form-control mt-3" name="file" placeholder="Código de barras ou nome">
                     </div>
                     <div class="col-lg-3">
-                        <button type="submit" class="btn btn-primary mt-3">Buscar</button>
+                        <button type="submit" class="btn btn-primary mt-3">Adicionar</button>
                     </div> 
                 </div>
             </form>

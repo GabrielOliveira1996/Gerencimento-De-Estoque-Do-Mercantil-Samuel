@@ -2,7 +2,19 @@
 
 @section('content')
 <div class="container">
-    
+
+    @if(!empty(session('thereIsNoProductToReturnToStock')))
+        <div class="align-errors">
+            {{session('thereIsNoProductToReturnToStock')}}
+        </div>
+    @endif
+
+    @if(!empty(session('ProductIsNotInStock')))
+        <div class="align-errors">
+            {{session('ProductIsNotInStock')}}
+        </div>
+    @endif
+
     @if(!empty(session('unavailableQuantity')))
         <div class="align-errors">
             {{session('unavailableQuantity')}}
@@ -52,7 +64,7 @@
         </div>
     @endif
 
-    <table class="table table-dark mt-3">
+    <table class="table table-light table-bordered mt-3">
         <thead>
             <tr>
                 <th scope="col">Produto</th>

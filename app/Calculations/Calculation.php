@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Rules\Process;
+namespace App\Calculations;
 
 class Calculation{
 

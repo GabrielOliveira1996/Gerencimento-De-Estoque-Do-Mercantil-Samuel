@@ -28,33 +28,31 @@
         IE: ISENTO <br>
         IM: 66666 <br>
         ----------------------------------------------------------
-        {{$date}} <br>
         <table>
             <tr>
-                <th></th>
+                <th>{{$displayValue['created_at']}}</th>
                 <th></th>
                 <th></th>    
             </tr>
 
-            @foreach($invoiceProducts as $products)
+            @foreach($invoiceProducts as $product)
             <tr>
-                <td>{{ $products->name }}</td>
-                <td>{{ $products->quantity }}x</td>
-                <td>{{ $products->price }}</td>
+                <td>{{ $product['name'] }}</td>
+                <td>{{ $product['quantity'] }}x</td>
+                <td>{{ $product['price'] }}</td>
                 <td>=</td>
-                <td>{{ $products->price * $products->quantity }}</td>         
+                <td>{{ $product['price'] * $product['quantity'] }}</td>         
             </tr>
             @endforeach
         </table>
         ----------------------------------------------------------
-        
-            Desconto: {{ $discountValue }}
-            Subtotal: {{ $subTotalPrice }}
-            Total: {{ $totalPrice }}
-        
-
+      
+            Desconto: {{ $displayValue['discount'] }}
+            Subtotal: {{ $displayValue['subtotal'] }}
+            Total: {{ $displayValue['total'] }}
+            
         <br>
-            <p style="text-align:center;">{{$invoice}}</p>
+            <p style="text-align:center;">{{$displayValue['invoice']}}</p>     
         <br>
         <br>
  

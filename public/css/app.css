@@ -7,6 +7,22 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+.cart-color{
+  color: #edeef0;
+}
+
+.cart-color:hover{
+  color: white;
+}
+
+.nav-color-blue{
+  background-color: #4a76a8;
+}
+
+.bodycolor{
+  background-color: #edeef0;
+}
+
 .font-error{
   color: red;
 }
@@ -2216,7 +2232,7 @@ progress {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 0.1rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4532,7 +4548,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 5px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 .card > hr {

@@ -3,6 +3,18 @@
 @section('content')
 <div class="container">
 
+    @if(!empty(session('nameRequired')))
+        <div class="align-errors">
+            {{session('nameRequired')}}
+        </div>
+    @endif
+
+    @if(!empty(session('ProductIsNotInStock')))
+        <div class="align-errors">
+            {{session('ProductIsNotInStock')}}
+        </div>
+    @endif
+    
     @if(!empty(session('successfulProductChange')))
         <div class="align-success-request">
             {{session('successfulProductChange')}}
@@ -56,7 +68,7 @@
         </div>
     </form>
 
-    <table class="table table-dark mt-5">
+    <table class="table table-light table-bordered mt-5">
         <thead>
             <tr>
                 <th scope="col">Produto</th>
