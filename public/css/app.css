@@ -1,11 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
+.inputBox{
+  position: relative;
+}
+
+.input{
+  position: relative;
+  background: none;
+  font-size: 14px;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #4a76a8;
+  outline: none;
+}
+
+.labelInput{
+  position:absolute;
+  top: 10px;
+  left: 20px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input:focus ~ .labelInput,
+input:valid ~ .labelInput{
+  top: -18px;
+  font-size: 13px;
+  color: #4a76a8;
+  font-weight: bold;
+}
 
 .cart-color{
   color: #edeef0;

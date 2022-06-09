@@ -26,21 +26,25 @@
 
             <form method="POST">
                 @csrf
-                <div class="row">
-                    <div class="col-lg-4">
-                        <input type="text" name="name" class="form-control mt-3" placeholder="Nome">
+                <div class="row mb-3">
+                    <div class="col-md-4 inputBox">
+                        <input type="text" name="name" class="input" required autocomplete="off">
+                        <label class="labelInput">Nome</label>
                     </div>
-                    <div class="col-lg-2">
-                        <input type="text" name="price" class="form-control mt-3" placeholder="Valor">
+                    <div class="col-lg-2 inputBox">
+                        <input type="text" name="price" class="input" required autocomplete="off">
+                        <label class="labelInput">Valor</label>
                     </div>
-                    <div class="col-lg-2">
-                        <input type="number" name="quantity" class="form-control mt-3" placeholder="Quantidade">
+                    <div class="col-lg-2 inputBox">
+                        <input type="number" name="quantity" class="input" required autocomplete="off">
+                        <label class="labelInput">Quantidade</label>
                     </div>
                 </div>
                 
-                <div class="row">
-                    <div class="col-lg-8">
-                        <input type="text" name="bar_code" class="form-control mt-3" maxlength="13" placeholder="Código de barras">
+                <div class="row mb-3">
+                    <div class="col-lg-8 inputBox">
+                        <input type="text" name="bar_code" class="input" maxlength="13" required autocomplete="off">
+                        <label class="labelInput">Código de barras</label>
                     </div>
                 </div>
                     

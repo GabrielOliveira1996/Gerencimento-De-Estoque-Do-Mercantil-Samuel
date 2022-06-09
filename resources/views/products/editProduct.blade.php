@@ -18,20 +18,21 @@
             <p class="d-flex justify-content-center">Cadastre um produto de cada vez.</p>
             <form method="POST">
                 @csrf
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-4">
-                        <input type="text" name="name" value="{{ $catchProduct->name }}" class="form-control mt-3" placeholder="Nome">
+                <div class="row d-flex justify-content-center mb-3">
+                    <div class="col-lg-4 inputBox">
+                        <input type="text" name="name" value="{{ $catchProduct->name }}" class="input">
                     </div>
-                    <div class="col-lg-2">
-                        <input type="text" name="price" value="{{ $catchProduct->price }}" class="form-control mt-3" placeholder="Valor">
+                    <div class="col-lg-2 inputBox">
+                        <input type="text" name="price" value="{{ $catchProduct->price }}" class="input">
                     </div>
-                    <div class="col-lg-2">
-                        <input type="number" name="quantity" value="{{ $catchProduct->quantity }}" class="form-control mt-3" placeholder="Quantidade">
+                    <div class="col-lg-2 inputBox">
+                        <input type="number" name="quantity" value="{{ $catchProduct->quantity }}" class="input">
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-8">
-                        <input type="text" name="bar_code" value="{{ $catchProduct->bar_code }}" class="form-control mt-3" maxlength="13" placeholder="Código de barras">
+                <div class="row d-flex justify-content-center mb-3">
+                    <div class="col-lg-8 inputBox">
+                        <input class="input" type="text" name="bar_code" value="{{ $catchProduct->bar_code }}" maxlength="13">
+                        <label class="labelInput">Código de barras</label>
                     </div>
                 </div>
 

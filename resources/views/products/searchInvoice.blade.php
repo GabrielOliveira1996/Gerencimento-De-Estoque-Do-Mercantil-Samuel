@@ -21,8 +21,9 @@
         @csrf
         <div class="d-flex justify-content-center">       
             <div class="row">
-                <div class="col-lg-9">
-                    <input type="text" class="form-control" name="invoice" maxlength="32" placeholder="Código do comprovante">
+                <div class="col-lg-9 inputBox">
+                    <input type="text" class="input" name="invoice" maxlength="32" required autocomplete="off">
+                    <label class="labelInput">Código do comprovante</label>
                 </div>
                 <div class="col-lg-3">
                     <button type="submit" class="btn btn-primary">Buscar</button>

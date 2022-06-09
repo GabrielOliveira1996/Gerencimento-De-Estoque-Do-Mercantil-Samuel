@@ -38,15 +38,17 @@
         <div class="row d-flex justify-content-center">
             
         <div class="row d-flex justify-content-center">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-2">
-                    <input type="text" name="bar_code" class="form-control mt-3" maxlength="13" placeholder="Código de barras">
+            <div class="row mb-3 d-flex justify-content-center">
+                <div class="col-lg-2 inputBox">
+                    <input type="text" name="bar_code" class="input" maxlength="13" required autocomplete="off">
+                    <label class="labelInput">Código de barras</label>
                 </div>
             </div>
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-2">
-                    <input type="number" name="quantity" class="form-control mt-3" placeholder="Quantidade">
+            <div class="row mb-3 d-flex justify-content-center">
+                <div class="col-lg-2 inputBox">
+                    <input type="number" name="quantity" class="input" required autocomplete="off">
+                    <label class="labelInput">Quantidade</label>
                 </div>
             </div>
         </div>

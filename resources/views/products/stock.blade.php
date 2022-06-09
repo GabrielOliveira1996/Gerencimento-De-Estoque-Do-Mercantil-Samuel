@@ -58,8 +58,9 @@
         @csrf
         <div class="d-flex justify-content-center">       
             <div class="row">
-                <div class="col-lg-9">
-                    <input type="text" class="form-control" name="bar_code" maxlength="13" placeholder="Código de barras ou nome">
+                <div class="col-lg-9 inputBox">
+                    <input type="text" class="input" name="bar_code" maxlength="13" required autocomplete="off">
+                    <label class="labelInput">Código de barras</label>
                 </div>
                 <div class="col-lg-3">
                     <button type="submit" class="btn btn-primary">Buscar</button>
